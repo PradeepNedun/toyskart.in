@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { getOrderId } from '../../generateOrderId';
+import { getOrderId, removeOrderId } from '../../generateOrderId';
 
 class FormContactInfo extends React.Component {
 	// eslint-disable-next-line no-useless-constructor
@@ -19,7 +19,7 @@ class FormContactInfo extends React.Component {
 			customer: {},
 			qty: 1
 		}
-
+		removeOrderId();
 	}
 	onChange = (e) => {
 		let prop = {};
@@ -43,7 +43,7 @@ class FormContactInfo extends React.Component {
 		  customerEmail: co_email,
 		  customerName: co_first_name,
 		  customerPhone: co_phone,
-		  returnUrl: "hhttps://toyskart.herokuapp.com/confirm",
+		  returnUrl: "https://toyskart.herokuapp.com/confirm",
 		};
 		console.log(data.orderId)
 		formData.append("appId", data.appId);
