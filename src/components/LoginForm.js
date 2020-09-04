@@ -14,13 +14,14 @@ class LoginForm extends React.Component {
   render() {
     const { mobile, otp } = this.state;
     return (
+      <div className="container col-md-4">
       <ProductConsumer>
         {value => {
           if (value.isloggedIn) {
             return <Redirect to="/list" />;
           }
           return (
-            <form onSubmit={this.handleSubmit(value.setLogInStatus, value.setCookie)} 
+            <form onSubmit={this.handleSubmit(value.setLogInStatus, value.setCookie)}
             style={{
               position: 'absolute',
               top: '25%',
@@ -52,6 +53,7 @@ class LoginForm extends React.Component {
           )
         }}
     </ProductConsumer>
+    </div>
     );
   }
 
