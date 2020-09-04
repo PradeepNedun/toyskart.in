@@ -7,7 +7,8 @@ import { ProductConsumer } from '../../../context';
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { getOrderId } from '../../generateOrderId';
 
 class FormContactInfo extends React.Component {
 	// eslint-disable-next-line no-useless-constructor
@@ -35,15 +36,16 @@ class FormContactInfo extends React.Component {
 		const data = {
 		  appId: "30172e4b88352b8f19feebef127103",
 		  secretKey: "5538a8ff4944458b0a10b866ed11d8486c01e984",
-		  orderId: co_phone+ "_"+ new Date(),
+		  orderId: getOrderId(co_phone),
 		  orderAmount: localStorage.getItem("totalPrice"),
 		  orderCurrency: "INR",
 		  orderNote: "Order for "+ co_email,
 		  customerEmail: co_email,
 		  customerName: co_first_name,
 		  customerPhone: co_phone,
-		  returnUrl: "https://toyskart.herokuapp.com/confirm",
+		  returnUrl: "hhttps://toyskart.herokuapp.com/confirm",
 		};
+		console.log(data.orderId)
 		formData.append("appId", data.appId);
 		formData.append("secretKey", data.secretKey);
 		formData.append("orderId", data.orderId);

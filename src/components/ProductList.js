@@ -14,7 +14,6 @@ export default class ProductList extends Component {
               <ProductConsumer>
                 {value => {
                   return value.products.map(product => {
-                    console.log(value.itemsInCart[product.id], product.id);
                     return <Product key={product.id} product={product} onCartAdd={value.addToCart} isLoggedIn={value.isloggedIn} inCart={value.itemsInCart[product.id]}/>;
                   });
                 }}
