@@ -14,7 +14,10 @@ class LoginForm extends React.Component {
   render() {
     const { mobile, otp } = this.state;
     return (
-      <div className="container col-md-4">
+      <div className="container"
+      >
+      <div className="col-md-4 col-xs-12 mt-5"
+      >
       <ProductConsumer>
         {value => {
           if (value.isloggedIn) {
@@ -53,6 +56,7 @@ class LoginForm extends React.Component {
           )
         }}
     </ProductConsumer>
+    </div>
     </div>
     );
   }
