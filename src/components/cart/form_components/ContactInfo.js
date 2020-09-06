@@ -59,7 +59,7 @@ class FormContactInfo extends React.Component {
 
 		fetch("https://test.cashfree.com/api/v1/order/create", {
 		  method: 'post',
-		  body: formData,
+		  body: formData
 		})
 		.then(response => response.json())
 		.then(res => {
@@ -98,7 +98,7 @@ class FormContactInfo extends React.Component {
 
                               return (
 								  <>
-									<h2 className="mb-3">Shipping Information</h2>
+									<h2 className="mb-3">Shipping Info</h2>
 									<FormGroup>
 										<Input type="email" name="co_email" id="coContactEmail" placeholder="Email (For Order Confirmation)" required onChange={this.onChange} />
 									</FormGroup>
@@ -171,7 +171,6 @@ class FormContactInfo extends React.Component {
 									<Table>
 									<thead>
 										<tr>
-										<th>#</th>
 										<th>Product</th>
 										<th>Qty</th>
 										<th>Amount</th>
@@ -189,7 +188,6 @@ class FormContactInfo extends React.Component {
 										}
 										return (
 											<tr>
-											<th scope="row">{index+1}</th>
 											<td>{title}</td>
 											<td>
 												<Input type="select" name="selectMulti" id="exampleSelectMulti" onChange={e => this.qtyChange(e, values.addToCart, itemId)}>

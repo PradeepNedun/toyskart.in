@@ -15,13 +15,13 @@ export default class Navbar extends Component {
             {/*
               https://www.iconfinder.com/icons/1243689/call_phone_icon
               Creative Commons (Attribution 3.0 Unported);
-              https://www.iconfinder.com/Makoto_msk 
+              https://www.iconfinder.com/Makoto_msk
           */}
             <Link to="/">
               <img src={logo} className="navbar-brand" alt="logo" style={{ height: '60px', width: '100px' }}/>
             </Link>
             <ul className="navbar-nav align-items-center">
-              <Link to="/list" className="nav-link ml-5" style={{ color: "#FFF" }}>
+              <Link to="/list" className="nav-link" style={{ color: "#FFF", fontSize: "0.8rem" }}>
                 Products
               </Link>
             </ul>
@@ -39,14 +39,14 @@ export default class Navbar extends Component {
               isloggedIn && (
                 <>
                   <Link to="/cart" className="ml-auto">
-                    <Button color="warning" style={{ height: "40px", width: "120px", fontSize: "14px" }}>
+                    <Button color="warning" style={{ height: "40px", width: "100px", fontSize: "0.8rem" }}>
                       <span className="mr-2">
                         <i className="fas fa-cart-plus" aria-hidden="true"></i>
                       </span>
                       <span>My Cart | {" "} {value.totalProductsInCart()}</span>
                     </Button>
                   </Link>
-                  <Link onClick={() => value.eraseCookie()} className="nav-link" style={{ color: "#FFF" }} to="/">
+                  <Link onClick={() => value.eraseCookie()} className="nav-link" style={{ color: "#FFF", fontSize: "0.8rem" }} to="/">
                     LogOut
                   </Link>
                 </>
