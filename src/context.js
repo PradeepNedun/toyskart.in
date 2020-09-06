@@ -101,10 +101,11 @@ class ProductProvider extends Component {
     return null;
   }
 
-  eraseCookie = ( name = "uuid", flag) => {   
+  eraseCookie = ( name = "uuid", flag) => {
     document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     if(!flag) {
       this.setLogInStatus(false);
+      document.cookie = "products" +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
       localStorage.setItem("totalPrice", 0);
     }
     this.setState({ itemsInCart: {} });

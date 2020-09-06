@@ -54,11 +54,12 @@ export default class ConfirmOrder extends Component {
 
   render() {
     return (
+      <>
         <ProductConsumer>
             {value => {
                 this.setFlag(value);
                 if (this.state.sucess === "sucess") {
-                  return (<div className="container">
+                  return (<div className="container" style={{ height: "100vh"}}>
                       <img src="img/sucess.png" width={200} height={200} alt="success" className="mt-4" style={{ display: "block", margin: "0 auto" }}/>
                       <h3 style={{ textAlign: "center" }}>Thanks for Shopping with us !!</h3>
                       <p style={{ textAlign: "center" }}>
@@ -67,7 +68,7 @@ export default class ConfirmOrder extends Component {
                   </div>)
                 }
                 if (this.state.sucess === "failure") {
-                  return (<div className="container">
+                  return (<div className="container" style={{ height: "100vh"}}>
                       <img src="img/error.png" width={200} height={200} alt="success" className="mt-4" style={{ display: "block", margin: "0 auto" }}/>
                       <h3 style={{ textAlign: "center" }}>oops !! Something went wrong !!</h3>
                       <p style={{ textAlign: "center" }}>
@@ -78,6 +79,17 @@ export default class ConfirmOrder extends Component {
             }
         }
     </ProductConsumer>
+    <footer style={{ color: "#fff"}}>
+    <div style={{ height: "100%", padding: "0.5rem"}}>
+      <span style={{ fontSize: "12px", float: "right"}}>Sainya Technologies Pvt Ltd</span>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <span>For Order Status/ Queries: Whatsapp or call 7708617009</span>
+      </div>
+    </footer>
+    </>
     );
   }
 }

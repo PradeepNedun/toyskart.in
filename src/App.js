@@ -15,6 +15,7 @@ import Landingpage from "./components/Landingpge";
 import ConfirmOrder from "./components/ConfirmOrder";
 
 class App extends Component {
+
   render() {
     return(
     <>
@@ -32,16 +33,6 @@ class App extends Component {
         </Switch>
         <div class="push"></div>
       </div>
-      <footer style={{ color: "#fff"}}>
-      <div style={{ height: "100%", padding: "0.5rem"}}>
-        <span style={{ fontSize: "12px", float: "right"}}>Sainya Technologies Pvt Ltd</span>
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        <span>For Order Status/ Queries: Whatsapp or call 7708617009</span>
-        </div>
-      </footer>
     </>
     );
   }
