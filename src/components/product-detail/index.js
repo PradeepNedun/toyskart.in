@@ -73,7 +73,8 @@ var Product = createReactClass({
    */
   render: function () {
     return (
-        <div className="container">
+      <div>
+        <div className="container" style={{overflow:"auto"}}>
           {/* <Link to="/list" className="mt-1">Back To Products</Link> */}
           <div className="col-xs-12 col-sm-4">
             <ProductName name={this.props.location.state.title} />
@@ -90,6 +91,7 @@ var Product = createReactClass({
             <ProductDetail features={this.props.location.state.features || []} />
           </div>
         </div>
+      </div>
     );
   },
 });

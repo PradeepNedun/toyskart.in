@@ -16,9 +16,11 @@ import ConfirmOrder from "./components/ConfirmOrder";
 
 class App extends Component {
   render() {
-    return (
-      <Fragment>
+    return(
+    <>
+      <div className="spacer">
         <Navbar />
+
         <Switch>
           <Route exact path="/list" component={ProductList} />
           <Route path="/details" component={Details} />
@@ -28,10 +30,19 @@ class App extends Component {
           <Route path="/" component={Landingpage} />
           <Route component={Default} />
         </Switch>
-        {/* <footer>
-          hi
-        </footer> */}
-      </Fragment>
+        <div class="push"></div>
+      </div>
+      <footer style={{ color: "#fff"}}>
+      <div style={{ height: "100%", padding: "0.5rem"}}>
+        <span style={{ fontSize: "12px", float: "right"}}>Sainya Technologies Pvt Ltd</span>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <span>For Order Status/ Queries: Whatsapp or call 7708617009</span>
+        </div>
+      </footer>
+    </>
     );
   }
 }
