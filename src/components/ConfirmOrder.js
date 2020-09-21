@@ -79,16 +79,6 @@ export default class ConfirmOrder extends Component {
             }
         }
     </ProductConsumer>
-    <footer style={{ color: "#fff"}}>
-    <div style={{ height: "100%", padding: "0.5rem"}}>
-      <span style={{ fontSize: "12px", float: "right"}}>Sainya Technologies Pvt Ltd</span>
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      &nbsp;
-      <span>For Order Status/ Queries: Whatsapp or call 7708617009</span>
-      </div>
-    </footer>
     </>
     );
   }

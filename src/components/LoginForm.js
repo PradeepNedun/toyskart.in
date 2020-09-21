@@ -15,8 +15,7 @@ class LoginForm extends React.Component {
     const { mobile, otp } = this.state;
     return (
       <div className="container"
-      >
-      <div className="col-md-4 col-xs-12 mt-5"
+      style={{ minHeight: "100vh", marginTop: "20px" }}
       >
       <ProductConsumer>
         {value => {
@@ -25,12 +24,7 @@ class LoginForm extends React.Component {
           }
           return (
             <form onSubmit={this.handleSubmit(value.setLogInStatus, value.setCookie)}
-            style={{
-              position: 'absolute',
-              top: '25%',
-              left: '50%',
-              transform: 'translate(-50%)',
-            }}
+
           >
             <label htmlFor="email">Mobile or Email</label>
             <input
@@ -56,7 +50,6 @@ class LoginForm extends React.Component {
           )
         }}
     </ProductConsumer>
-    </div>
     </div>
     );
   }

@@ -8,7 +8,7 @@ export default class ProductList extends Component {
       <React.Fragment>
         {/* <Product /> */}
         <div className="py-5">
-          <div className="container">
+          <div className="container" style={{ minHeight: "100vh" }}>
             {/* <Title name="our" title="products" /> */}
             <div className="row">
               <ProductConsumer>
@@ -21,16 +21,6 @@ export default class ProductList extends Component {
             </div>
           </div>
         </div>
-        <footer style={{ color: "#fff"}}>
-        <div style={{ height: "100%", padding: "0.5rem"}}>
-          <span style={{ fontSize: "12px", float: "right"}}>Sainya Technologies Pvt Ltd</span>
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          &nbsp;
-          <span>For Order Status/ Queries: Whatsapp or call 7708617009</span>
-          </div>
-        </footer>
       </React.Fragment>
     );
   }
